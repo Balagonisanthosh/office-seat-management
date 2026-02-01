@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Office Seat Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Office Seat Management System</h1>
+  <p>Building Architecture & Seat Availability</p>
+</header>
+
+<main class="building">
+
+  <div class="room-card" onclick="openRoom('dev')">
+    <h3>Development Room</h3>
+    <p id="devTotal"></p>
+    <p id="devAvailable"></p>
+    <p id="devBooked"></p>
+  </div>
+
+  <div class="room-card" onclick="openRoom('test')">
+    <h3>Testing Room</h3>
+    <p id="testTotal"></p>
+    <p id="testAvailable"></p>
+    <p id="testBooked"></p>
+  </div>
+
+  <div class="room-card" onclick="openRoom('hr')">
+    <h3>HR Room</h3>
+    <p id="hrTotal"></p>
+    <p id="hrAvailable"></p>
+    <p id="hrBooked"></p>
+  </div>
+
+  <div class="room-card" onclick="openRoom('mgmt')">
+    <h3>Management Cabin</h3>
+    <p id="mgmtTotal"></p>
+    <p id="mgmtAvailable"></p>
+    <p id="mgmtBooked"></p>
+  </div>
+
+  <div class="room-card" onclick="openRoom('conf')">
+    <h3>Conference Hall</h3>
+    <p id="confTotal"></p>
+    <p id="confAvailable"></p>
+    <p id="confBooked"></p>
+  </div>
+
+  <div class="room-card" onclick="openRoom('train')">
+    <h3>Training Room</h3>
+    <p id="trainTotal"></p>
+    <p id="trainAvailable"></p>
+    <p id="trainBooked"></p>
+  </div>
+
+</main>
+
+<!-- Room Modal -->
+<div class="modal-overlay" id="roomModal">
+  <div class="modal">
+    <h2 id="roomTitle"></h2>
+    <div id="seatLayout"></div>
+    <div class="actions">
+      <button onclick="closeRoom()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Confirm Modal -->
+<div class="modal-overlay" id="confirmModal">
+  <div class="modal">
+    <p id="confirmText"></p>
+    <div class="actions">
+      <button onclick="confirmBooking()">Confirm</button>
+      <button onclick="closeConfirm()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

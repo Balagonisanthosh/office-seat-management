@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #eef2f6;
+  color: #1f2937;
+}
+
+header {
+  background: #0f172a;
+  color: white;
+  padding: 22px;
+  text-align: center;
+}
+
+.building {
+  max-width: 1100px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+/* Room Cards */
+.room-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.room-card:hover {
+  transform: translateY(-6px);
+}
+
+.room-card h3 {
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.room-card p {
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+/* Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 25px;
+  width: 420px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+/* Layouts */
+.u-shape {
+  display: flex;
+  justify-content: space-between;
+}
+
+.u-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.row-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Seats */
+.seat {
+  width: 44px;
+  height: 44px;
+  margin: 6px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.available {
+  background: linear-gradient(145deg, #22c55e, #16a34a);
+}
+
+.available:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.booked {
+  background: linear-gradient(145deg, #e5e7eb, #cbd5e1);
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+/* Buttons */
+.actions {
+  margin-top: 18px;
+}
+
+.actions button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
